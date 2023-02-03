@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Open+Sans&family=Roboto:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-black: rgb(39,41,50);
+    --main-white: rgb(233, 231, 231);
+    --blue-one: rgb(77,126,168);
+    --blue-two: rgb(182,194,217);
+    --gray-one: rgb(139,132,137);
+    --gray-two: rgb(158,144,162);
+    overflow-x: hidden;
+}
+
+
+
+a{
+    text-decoration: none !important;
+}
+
+li{
+    list-style: none !important;
+}
+
+h2{
+    font-size: 4rem !important;
+    color: var(--main-black);
+    font-family: 'Crimson Text', serif;
+
+}
+/* body{
+    background-color: var(--main-black);
+} */
+
+.navbar-container{
+    background-color: var(--main-black);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.navbar{
+    background-color: var(--main-black);
+    max-width: 1200px;
+    margin: auto;
+    height: min(12vh, 100px);
+    width: 100%;
+}
+
+
+.navbar a{
+    color: var(--main-white) !important;
+}
+
+.navbar-brand{
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+.nav-link{
+    width: 100%;
+    text-align: center;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.2rem;
+
+
+}
+
+.nav-link:hover{
+    color: var(--blue-one) !important;
+    font-size: large;
+}
+
+/* home */
+#home{
+    background-color: var(--blue-one);
+    min-height: 100vh;
+    text-align: center;
+}
+
+#home h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+#home .img-container{
+    height: 325px;
+}
+
+#home .img-thumbnail{
+    width: 100%;
+    height: 100%;
+}
+
+
+.hr{
+    width: 100%;
+    max-width: 500px;
+    height: 2px;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(left, var(--gray-one),var(--gray-two));
+}
+
+
+#home .container > *:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.me-about{
+    /* border: 1px solid red; */
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: var(--main-white);
+
+}
+
+/* projects sectoin */
+#projects{
+    background-color: var(--blue-two);
+    min-height: min(88vh);
+}
+
+
+.project{
+    padding: 10px;
+}
+
+.project-image{
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+.project-image img{
+    width: 100%;
+    border-radius: 10%;
+}
+
+.img-overlay{
+    position: absolute;
+    border-radius: 10%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(139,132,137,.6);
+    color: white;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.img-overlay:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.img-overlay .plus-sign{
+    font-size: 5rem;
+    color: var(--main-white);
+}
+
+.modal-img{
+    height: auto;
+    max-height: 500px;
+    border-radius: 10%;
+    width: 100%;
+}
+
+
+.modal-content{
+    background-color: var(--main-white);
+}
+
+.modal-body{
+    margin: auto;
+    width: 70%;
+}
+
+.modal-body p{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.modal-content h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+
+}
+
+/* about */
+
+#about{
+    background-color: var(--blue-one);
+    min-height: 88vh;
+}
+
+#about h2{
+    color: var(--main-white);
+}
+
+#about p{
+    font-size: 1.2rem;
+    color: var(--main-white);
+}
+
+/* contact me section */
+#contact-me{
+    min-height: 88vh;
+}
+
+#contact-me label{
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif;
+
+    
+}
+
+/* bottom section */
+#bottom{
+    background-color: var(--main-black);
+    color: var(--main-white);
+    height: 200px;
+}
+
+#bottom{
+    font-family: 'Open Sans', sans-serif;
+}
+
+#bottom a{
+    color: var(--main-white);
+}
+
+footer{
+    color: white;
+    background-color: black;
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8rem;
+    padding: 1.5rem;
+}
+
+/* tabs */
+@media only screen and (max-width: 767px) {
+    .navbar{
+        height: auto;
+
+    }
+
+    .navbar .navbar-nav a{
+        border-bottom: var(--main-white) 1px solid;
+    }
+
+    /* home */
+
+    #home h1{
+        font-size: 3rem;
+    }
+
+    .me-about h3{
+        font-size: 1.2rem;
+    }
+
+    /* projects */
+    .modal-body{
+        width: 80%;
+    }
+
+    .modal-body h1{
+        font-size: 3.5rem;
+    }
+}
+
+/* phone */
+@media only screen and (max-width: 468px){
+    #home h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .me-about h3{
+        font-size: 1rem;
+    }
+}
+
+/* extreme small */
+@media only screen and (max-width: 350px){
+
+    #home .img-container{
+        height: 200px;
+    }
+
+    .navbar-brand{
+        font-size: 1.3rem;
+    }
+    .nav-link{
+        font-size: 1rem;
+    }
+
+    .modal-body h1{
+        font-size: 3rem;
+    }
+
+    .modal-body p{
+        font-size: .9rem;
+    }
+
+
+
+}
